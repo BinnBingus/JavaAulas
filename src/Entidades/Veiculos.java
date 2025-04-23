@@ -54,10 +54,10 @@ public class Veiculos {
 	
 	@Override
 	public String toString() {
-		return "Marca=" + marca + 
-				"\nModelo=" + modelo + 
-				"\nAno=" + Ano + 
-				"\nValorDiario=" + ValorDiario;
+		return "[Marca]    	 = " + marca + 
+				"\n[Modelo]	 = " + modelo + 
+				"\n[Ano]     	 = " + Ano + 
+				"\n[ValorDiario]    = " + ValorDiario;
 	}
 	
 }

@@ -1,6 +1,8 @@
 package Entidades;
 
-public class Carro extends Veiculos {
+import serviço.Alugar;
+
+public class Carro extends Veiculos implements Alugar {
 	//Encapsulamento
 	//Atributos
 	
@@ -13,5 +15,28 @@ public class Carro extends Veiculos {
 		this.ArCondicionado = ArCondicionado;
 		// TODO Auto-generated constructor stub
 	}
+	
+	//toString
+	
+	public String ToString() {
+		return "Marca : " + getMarca() +
+				"Modelo : " + getModelo() +
+				"Ano : " + getAno() +
+				"Valor diaria : " + getValorDiario() + 
+				"Ar Condicionado : " + ArCondicionado;
+	}
+	
+	public double calcularAluguel(int dias) {
+		double ValorAluguel;
+		
+		if (ArCondicionado) {
+			ValorAluguel = getValorDiario() * dias * 1.5;
+		} else {
+			ValorAluguel = getValorDiario() * dias;
+		}
+		
+		return ValorAluguel;
+	}
+	
 	
 }
